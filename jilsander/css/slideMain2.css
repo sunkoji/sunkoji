@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+ul {list-style-type: none;}
+a {text-decoration: none; color: rgba(0,0,0,0.6);}
+.inner {width: 1200px; margin: 0 auto;}
+.clear:after {content: ""; display: block; clear: both;}
+.blind {display: none;}
+button:focus {outline: none;}
+
+/* header */
+h1 a {display: block;}
+.logo {width: 138px;height: 20px;margin: 30px auto 40px;}
+nav {text-align: center;margin-bottom:30px;}
+ul li {display: inline-block;}
+ul li a {padding: 0 30px;}
+.visual {height: 800px; background: #bcbcbc url(../imgs/jilSander-01.JPG) no-repeat center/cover;}
+header .inner {position: relative;}
+.visualBox {
+    position: absolute; left: 0; bottom: -100px; 
+    width: 500px; height: 200px; 
+    padding: 30px;
+    border: 10px solid #fff;
+    background: #f5f4f2;
+    z-index: 3;
+}
+.visualBox p {font-size: 30px;}
+.visualBox p span {display: block; text-decoration: underline; font-size: 12px;line-height: 30px;}
+
+/* section */
+section {padding: 100px 0;}
+.se01 {padding-top: 200px;}
+.se01 h2 {font-weight: normal; margin-bottom: 50px;}
+.se01 .clear {width: 1110px; margin: 30px auto 50px;}
+.se01 .clear > div {
+    float: left;
+    width: 350px; height: 500px; margin: 0 10px;
+    background: none; overflow: hidden;
+}
+.se01 .clear > div a {position: relative; display: block;} 
+.se01 .clear > div a img {position: absolute; top: 0; left: 0; height: 500px;} 
+.se01 .clear > div a img:first-child ~ img {display: none;}
+
+.se02 .inner > div {float: left; width: 540px; margin: 0 30px;}
+.se02 .text {padding-top: 50px;}
+.se02 h2 {
+    width: 500px; margin-bottom: 30px;
+    font-size: 39px; font-weight: normal;
+    line-height: 1.4;
+}
+.se02 b {
+    display: block; margin-bottom: 30px;
+    font-size: 18px; font-weight: normal;
+}
+.se02 i {
+    display: block;
+    margin-bottom: 30px;
+    font-style: normal; font-size: 12px;
+}
+.se02 p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.se02 .image {
+    height: 700px;
+    background: url(../imgs/jilSander-10.JPG) no-repeat center/cover;
+}
+.se03 {padding-bottom: 100px;}
+.se03 h2 {text-transform: uppercase; font-weight: normal;}
+.slick-slide {margin: 50px 10px 0 0;}
+.slick-slide > div > div {
+    height: 150px;
+    background: url(../imgs/jilSander-11.JPG) no-repeat center/cover;
+}
+.slick-slide > div > div.img2 {background-image: url(../imgs/jilSander-12.JPG);}
+.slick-slide > div > div.img3 {background-image: url(../imgs/jilSander-15.JPG);}
+.slick-slide > div > div.img4 {background-image: url(../imgs/jilSander-18.JPG);}
+.slick-slide > div > div.img5 {background-image: url(../imgs/jilSander-06.JPG);}
+.slick-slide > div > div.img6 {background-image: url(../imgs/jilSander-34.JPG);}
+
+.slick-dots li button:before {font-size: 20px;}
+.slick-prev:before, .slick-next:before {
+    color: #000;
+}
+.slick-prev, .slick-next {top: 60%;}
+.slick-prev:before {content: "<"}
+.slick-next:before  {content: ">"}
+/* footer */
+footer {
+    background: #dfdfdf;
+}
+address {
+    padding: 30px 0 30px 20px;
+    font-size: 13px;
+    font-style: normal; color: rgba(0,0,0,.3);
+}
+address span:after {
+    content: "|";
+    padding: 0 10px;
+}
+address span:last-child:after {content: none;}
+
+@media screen and (max-width: 1279px){
+	.inner {
+		width: 80%;
+	}
+	.se01 .clear {
+		position: relative;
+		width: 100%;
+		padding-bottom: 550px;
+	}
+	.se01 .clear > div:first-child {
+		position: absolute; top:0; right: -15%;
+		width: 65%; height: 350px;
+		z-index: 1;
+	}
+	.se01 .clear > div:nth-child(2) {
+		position: absolute; top:150px; right: 30%;
+		width: 60%;
+	}
+	.se01 .clear > div:nth-child(3) {
+		position: absolute; top:230px; right: 10%;
+		width: 25%;
+		z-index: 2;
+	}
+	.se02 .inner > div {
+		width: 100%; margin: 0;
+	}
+	.se02 .text {
+		padding-bottom: 100px;
+	}
+}	
+
+@media screen and (max-width:767px) {
+	body {width: 100%; overflow-x: hidden;}
+	header {width: 100%;}
+	section {width: 100%;}
+	.headNav {
+		position: fixed; top: 0; left: 0;
+		width: 100%; height: 70px;
+		background: rgba(255,255,255,1);
+		z-index: 4;
+	}
+	.navButton {
+		display: block; float: right;
+		width: 50px; height: 50px;
+		margin: 10px 5% 20px 0;
+		background: none;
+		border: none;
+		text-indent: -9999px;
+	}
+	h1 {
+		float: left;
+		margin-left: 5%;
+		line-height: 15px;
+	}
+	.navButton span {
+		display: block;
+		height: 2px; width: 60%;
+		margin: 4px auto;
+		background: #000;
+	}
+	nav {
+		position: fixed; top: 70px; right: -70%;
+		width: 70%; height: 100%;
+		background: rgba(255,255,255,1);
+		z-index: 4;
+		transition: 0.5s;
+	}
+	nav ul li {
+		display: block;
+	}
+	nav ul li a {
+		display: block;
+		padding: 20px 0;
+	}
+	nav ul li:hover a {
+		color: #fff;
+		background: rgba(0,0,0,0.5);
+	}
+	.visual {
+		width: 100%;
+		margin-top: 70px;
+	}
+	.inner {
+		width: 100%;
+	}
+	.visualBox {
+		width: 80%; height: auto;
+	}
+	.visualBox p {
+		font-size: 19px;
+	}
+	.se01 .inner .clear > div {
+		position: static; top: 0; left: 0;
+		float: none;
+		width: 100%; margin: 10px 0;
+	}
+	.se01 .clear {padding-bottom: 0;}
+	.se01, .se02 {padding: 0;}
+	.se01 {padding-top: 150px;}
+	.se01 h2 {margin-left: 5%;}
+	.se02 h2 {width: auto; font-size: 1.5em;}
+	.se02 b {font-size: 14px;}
+	.se02 .inner .text {
+		float: none;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.se03 h2 {margin-left: -5%;}
+	.se03 .inner {width: 80%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
